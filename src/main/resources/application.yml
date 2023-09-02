@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-path: /challenge/api
+    context-path: /challenge1-person/api
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
