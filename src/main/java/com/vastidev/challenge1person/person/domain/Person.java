@@ -41,7 +41,6 @@ public class Person {
 
 
     public Person(String name, @NotNull LocalDate birthDate, @NotNull MainAddress main_address, AddicionalAddress addicionalAdress) {
-        this.idPerson = UUID.randomUUID();
         this.name = name;
         this.birthDate = birthDate;
         this.main_address = main_address;
