@@ -1,23 +1,20 @@
 package com.vastidev.challenge1person.person.domain;
 
+import jakarta.persistence.Column;
 import lombok.Data;
 import lombok.Value;
 import org.intellij.lang.annotations.Pattern;
 @Value
 @Data
 public class AddicionalAddress {
-
+    @Column(insertable=false, updatable=false)
     private String logradouro;
+    @Column(insertable=false, updatable=false)
     @Pattern("\\d{5}-\\d{3}")
     private String cep;
+    @Column(insertable=false, updatable=false)
     private String numero;
+    @Column(insertable=false, updatable=false)
     private String cidade;
 
-    public AddicionalAddress(String logradouro, String cep, String numero, String cidade) {
-
-        this.logradouro = logradouro;
-        this.cep = cep;
-        this.numero = numero;
-        this.cidade = cidade;
-    }
 }

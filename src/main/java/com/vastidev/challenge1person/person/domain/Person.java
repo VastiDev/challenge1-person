@@ -48,7 +48,5 @@ public class Person {
         this.dataHoraDoCadastro = LocalDateTime.now();
     }
 
-    public Person() {
 
-    }
 }
