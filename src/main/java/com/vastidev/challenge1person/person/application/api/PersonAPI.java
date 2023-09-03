@@ -1,6 +1,7 @@
 package com.vastidev.challenge1person.person.application.api;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -8,6 +9,6 @@ import org.springframework.web.bind.annotation.*;
 public interface PersonAPI {
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    PersonResponse postPerson(@RequestBody PersonRequest personRequest);
+    PersonResponse postPerson(@Validated @RequestBody PersonRequest personRequest);
 
 }
