@@ -1,5 +1,6 @@
 package com.vastidev.challenge1person.person.domain;
 
+import com.vastidev.challenge1person.person.application.api.PersonRequest;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -40,13 +41,11 @@ public class Person {
 
 
 
-    public Person(String name, @NotNull LocalDate birthDate, @NotNull MainAddress main_address, AddicionalAddress addicionalAdress) {
-        this.name = name;
-        this.birthDate = birthDate;
-        this.main_address = main_address;
-        this.addicionalAdress = addicionalAdress;
+    public Person(PersonRequest personRequest) {
+        this.name = personRequest.getName();
+        this.birthDate = personRequest.getBirthDate();
+        this.main_address = personRequest.getMain_address();
+        this.addicionalAdress = personRequest.getAddicionalAdress();
         this.dataHoraDoCadastro = LocalDateTime.now();
     }
-
-
 }
